@@ -1,6 +1,24 @@
 body {
   background-color: purple;
 }
+.edit-btn {
+  background-color: purple;
+  padding: 5px 10px!important;
+  color: #fff;
+  border: 1px solid purple;
+}
+.close-btn {
+  color: purple;
+  padding: 5px 10px!important;
+  border: 1px solid purple;
+}
+.text-modal {
+  font-size: 15px;
+}
+.modal-head {
+  font-size: 17px;
+  font-weight: 500;
+}
 
 html {
   font-size: 62.5%;

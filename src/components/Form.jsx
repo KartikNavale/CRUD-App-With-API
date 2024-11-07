@@ -5,19 +5,19 @@ import { postData, updateData } from "../api/PostApi";
 export const Form = ({ data, setData, updateDataApi, setUpdateDataApi }) => {
   const [addData, setAddData] = useState({
     title: "",
-    body: "",
+    body: "", 
   });
 
   let isEmpty = Object.keys(updateDataApi).length === 0;
 
-  // update data
-  useEffect(() => {
-    updateDataApi &&
-      setAddData({
-        title: updateDataApi.title || "",
-        body: updateDataApi.body || "",
-      });
-  }, [updateDataApi]);
+  // update data 
+  // useEffect(() => {
+  //   updateDataApi &&
+  //     setAddData({
+  //       title: updateDataApi.title || "",
+  //       body: updateDataApi.body || "",
+  //     });
+  // }, [updateDataApi]);
 
   const handleInputChange = (e) => {
     const name = e.target.name;
@@ -82,7 +82,7 @@ export const Form = ({ data, setData, updateDataApi, setUpdateDataApi }) => {
             id="title"
             name="title"
             placeholder="Add Title"
-            value={addData.title}
+            // value={addData.title}
             onChange={handleInputChange}
           />
         </div>
@@ -95,13 +95,16 @@ export const Form = ({ data, setData, updateDataApi, setUpdateDataApi }) => {
             placeholder="Add Data"
             id="body"
             name="body"
-            value={addData.body}
+            // value={addData.body}
             onChange={handleInputChange}
           />
         </div>
-        <button type="submit" value={isEmpty ? "Add" : "Edit"}>
-          {isEmpty ? "Add" : "Edit"}
+        <button type="submit">
+           Add
         </button>
+        {/*   <button type="submit" value={isEmpty ? "Add" : "Edit"}>
+          {isEmpty ? "Add" : "Edit"}
+        </button> */}
       </form>
     </>
   );
